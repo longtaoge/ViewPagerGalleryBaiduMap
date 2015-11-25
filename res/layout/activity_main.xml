@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/pager_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEEEEE"
+        android:clipChildren="false"
+        android:layerType="software" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/ii_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:clipChildren="false" >
+
+            <!-- 配置选项卡信息 -->
+            <!--
+             <android.support.v4.view.PagerTabStrip
+            android:id="@+id/ii_pagestrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+            -->
+        </android.support.v4.view.ViewPager>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/pageid"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#088800"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="30dp" >
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" />
+    </LinearLayout>
+
+</LinearLayout>
